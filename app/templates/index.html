@@ -2,26 +2,83 @@
 
 {% set active_page = "index" %}
 
+{% block title %}
+    How Did I Spend the Busiest Week?
+{% endblock %}
+
+{% block subtitle %}
+    This is the visual narrative of a mobile dataset collected using
+    the <a href="http://www.awareframework.com/">aware
+    framework</a>
+    to answer the question "how did I spend the Busiest Week".
+{% endblock %}
 
 {% block content %}
-    <div class="jumbotron">
-        <div class="container">
-            <h1>How Did I Spend the Busiest Week?</h1>
-            <p>This is the visual narrative of a mobile dataset collected using
-                the <a href="http://www.awareframework.com/">aware
-                    framework</a>
-                to answer the question "how did I spend the Busiest Week".
-            </p>
-        </div>
-    </div>
 
-    <div class="container">
-        <h2>Intro</h2>
+    <h2>Intro</h2>
 
-        <p>
-            The
-        </p>
-    </div>
+    <hr>
 
+    <p>
+        The week of October 7th is arguably my busiest week during the term.
+        I had a midterm, a presentation and a few deliverables for the cloud
+        computing course. Now that I have survived the week, I want to know how
+        I
+        spend the week using mobile data collected using the
+        <a href="http://www.awareframework.com/">aware framework</a>.
+    </p>
+
+    <hr>
+
+    <h2>Visual Narrative</h2>
+
+    <hr>
+
+    <p>
+        The map visualization shows where I had been using the <a
+            href="http://www.awareframework.com/locations/">location</a> data.
+        The markers in the map represent my recorded locations. The size of the
+        marker corresponds to how long I had been in one location, and the
+        color corresponds to my speed when the location is recorded. The map
+        visualization shows that I had been commuting between my home and the
+        school exclusively during the last week. The biggest bubble in the map
+        is the location of my home. The bubbles at the campus show that I spent
+        most of my time in the Gates Hillman complex, but I also spent some
+        time in the Porter Hall, where I take Machine Learning with Large
+        Dataset. I usually walk home via the Fair Oaks street, but the map
+        visualization shows a path from the school to home via the Beacon
+        street, this is the result of me taking the <a
+            href="https://www.cmu.edu/police/Shuttle%20and%20Escort">shuttle
+        service</a> on October 20th.
+    </p>
+
+    <p>
+        The <a href="http://www.awareframework.com/applications/">app usage</a>
+        visualization shows how much time I spent on each app
+        during the week. The size of the bubble represents the amount of time I
+        spent on the apps. I spent a lot of time on WeChat, which is a
+        communication app like Facebook Messenger. Interestingly, I also spent
+        a fairly large amount of time on "抖音短视频" (Tik Tok), which is a platform
+        to share 15-second videos. I must have been consuming Tik Toks during
+        my breaks. I also spent some time on Uber Eats and Amazon Shopping. I
+        was too busy during the week to do grocery shopping and prepare meals.
+    </p>
+
+
+    <p>
+        The Movements line plot shows the number of
+        <a href="http://www.awareframework.com/accelerometer/">significant movements</a>
+        during the week. There are spikes of large movements on October 7th and
+        October 8th, especially in the afternoon of October 8th. I was
+        practicing a presentation with my partner, and I was standing up and
+        moving around during the practice sessions, which must be the reason of
+        huge spikes. I had a midterm on the afternoon of October 9th, and I was
+        studying and printing the cheat sheet in the last minute since I spent
+        all my time preparing my presentation on Monday, and I was rushing
+        towards the exam location, which was captured by spikes on October 9th.
+        I spent the rest of the week doing my machine learning and cloud
+        computing homework at home and the library, and there were no spikes
+        from October 10th to 14th.
+    </p>
 
 {% endblock %}

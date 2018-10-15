@@ -31,6 +31,12 @@ def index():
     return template.render()
 
 
+@app.route('/about')
+def about():
+    template = env.get_template('about.html')
+    return template.render()
+
+
 @app.errorhandler(500)
 def server_error(e):
     # Log the error and stacktrace.

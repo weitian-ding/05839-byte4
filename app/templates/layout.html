@@ -16,7 +16,7 @@
 
 {% set navigation_bar = [
     ('/', 'index', 'Home'),
-    ('quality', 'quality', 'Date Quality')
+    ('about', 'about', 'About')
 ] -%}
 {% set active_page = active_page|default('index') -%}
 
@@ -44,13 +44,24 @@
 
 <!-- main -->
 <main role="main">
-    {% block content %}
-    {% endblock %}
+     <div class="jumbotron">
+        <div class="container">
+            <h1>{% block title %}{% endblock %}</h1>
+            <p>{% block subtitle %}{% endblock %}</p>
+        </div>
+    </div>
+
+    <div class="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+
     <hr>
 </main>
 
 <footer class="container">
-    <p><a href="mailto: weitiand@andrew.cmu.edu">weitiand</a></p>
+    <p><a href="mailto: weitiand@andrew.cmu.edu">@weitiand</a></p>
+    <p><a href="https://github.com/weitian-ding/05839-byte4">source code</a></p>
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
