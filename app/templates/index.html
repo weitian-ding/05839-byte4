@@ -20,7 +20,7 @@
     <hr>
 
     <p>
-        The week of October 7th is arguably my busiest week during the term.
+        The week of October 7th is probably my busiest week during the term.
         I had a midterm, a presentation and a few deliverables for the cloud
         computing course. Now that I have survived the week, I want to know how
         I
@@ -33,6 +33,8 @@
     <h2>Visual Narrative</h2>
 
     <hr>
+
+    <h3>Location Visualization</h3>
 
     <p>
         The map visualization shows where I had been using the <a
@@ -52,6 +54,12 @@
         service</a> on October 20th.
     </p>
 
+    {% include 'tableau_viz/location_viz.html' %}
+
+    <hr>
+
+    <h3>App Usage Visualization</h3>
+
     <p>
         The <a href="http://www.awareframework.com/applications/">app usage</a>
         visualization shows how much time I spent on each app
@@ -64,6 +72,11 @@
         was too busy during the week to do grocery shopping and prepare meals.
     </p>
 
+    {% include 'tableau_viz/app_usuage_viz.html' %}
+
+    <hr>
+
+    <h3>Significant Movement Visualization</h3>
 
     <p>
         The Movements line plot shows the number of
@@ -80,5 +93,7 @@
         computing homework at home and the library, and there were no spikes
         from October 10th to 14th.
     </p>
+
+    {% include 'tableau_viz/movement_viz.html' %}
 
 {% endblock %}
