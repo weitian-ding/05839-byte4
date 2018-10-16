@@ -21,7 +21,7 @@
         and wifi usage data using the
         <a href="http://www.awareframework.com/">aware framework</a>.
         I picked the
-        location data, app usage and movements to do my visualization because
+        location data, app usage and movements data to do my visualization because
         they represent three orthogonal aspects of how I was spending the week.
         I chose Tableau's map visualization to visualize my location since the
         map gives a context of where I had been. I use bubble charts to
@@ -29,7 +29,7 @@
         proportion of time I spent on an app because it is intuitive and
         visually appealing. I use a line plot to visualize the number of
         significant movements every hour because the data is a time series and
-        a line plot reflects the fluctuation with respect to time.
+        a line plot reflects the fluctuation of my activity with respect to time.
     </p>
 
     <hr>
@@ -44,7 +44,7 @@
         The data quality is accessed and ensured via
         <a href="https://github.com/weitian-ding/05839-byte4/blob/master/notebook/data_cleaning.ipynb">EDA using pandas</a>
         and
-        <a href="https://public.tableau.com/profile/weitian.ding#!">Tableau visualization</a>.
+        <a href="https://public.tableau.com/profile/weitian.ding#!">Tableau visualizations</a>.
         The following section describes the 4 C's in detail.
     </p>
 
@@ -55,11 +55,11 @@
         could provide more insights into answering the question. I carefully
         cleaned the data so that they serve a better purpose at answering my
         question. For example, in the Tableau App usage visualization, I
-        excluded Android system apps from the plot. I did not notice any junk
+        excluded Android system apps from the plot. Also, I did not notice any junk
         values during the EDA and visualizing the data with Tableau. There
         might be missing values due to my phone being off or Aware not able to
-        sync the data with MySQL database. The plot shows the number of records
-        found in MySQL databases versus day. that more data was collected
+        sync the data with MySQL database. The plot below shows the number of records
+        found in the three tables in MySQL databases versus date; more data was collected
         through October 8th to 10th than the rest of the week.
     </p>
 
@@ -68,10 +68,12 @@
     <p>
         <b>Coherence</b> Since the data Aware collected has a schema, there is
         little room for misbehaved data. Also, a lot of data, like battery
-        status, application usage comes from the Android system, I assume the
+        status, application usage comes from the Android system. I assume the
         Android system is robust enough to deliver coherent data to the Aware
-        client. I also made sure that the data matches my recollection of what
-        happened last week through Tableau visualization. I did need to convert
+        phone client. I also made sure that the data matches my recollection of what
+        happened last week through
+        <a href="https://public.tableau.com/profile/weitian.ding#!">Tableau visualizations</a>.
+        I did need to convert
         the Unix timestamp Aware collected to date time using
         <code>pandas.to_datatime()</code> function to make the timestamp interpretable.
     </p>
@@ -84,7 +86,8 @@
         sensor data with the MySQL backend, and I was carrying my phone all the
         time. These assumptions are only partially true since the plot above
         shows that the number of sensor records found in MySQL database varies
-        from day to day, and I generally leave my phone charging while I am at
+        from day to day. Also, I generally leave my phone charging instead of
+        carrying it around while I am at
         home. Though it is difficult to fix the data collection bias in
         hindsight, I carefully picked the data I visualized so that the
         represents three orthogonal aspects of my behavior during the last
@@ -97,8 +100,9 @@
         and stored
         in MySQL backend. I have access to both the original data stored in
         MySQL and cleaned data stored on my localhost. While I am the only
-        person having accessibility to the original data, the Tableau
-        visualizations are accessible to the public.
+        person having access to the original data, the
+        <a href="https://public.tableau.com/profile/weitian.ding#!">Tableau visualizations</a>
+        are accessible to the public.
     </p>
 
 {% endblock %}
